@@ -16,8 +16,7 @@ pipeline {
         }
         stage('assinging rights'){
             steps {
-                sh '''chmod -R 777 /var/lib/jenkins/workspace/github_nodejs_app
-                   cp * /var/lib/jenkins/workspace/github_nodejs_app/node-hello /var/lib/jenkins/workspace/github_nodejs_app'''
+                sh 'cp * /var/lib/jenkins/workspace/github_nodejs_app/node-hello /var/lib/jenkins/workspace/github_nodejs_app'
             }
         }
         stage('Build') {
