@@ -14,6 +14,11 @@ pipeline {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
+        stage('assinging rights'){
+            steps {
+                sh 'chmod -R 777 /var/lib/jenkins/workspace/github_nodejs_app'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm start'
