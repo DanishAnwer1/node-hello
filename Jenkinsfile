@@ -14,9 +14,10 @@ pipeline {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
-        stage('assinging rights'){
+        stage('a'){
             steps {
-                sh 'cp * /var/lib/jenkins/workspace/github_nodejs_app/node-hello /var/lib/jenkins/workspace/github_nodejs_app'
+                sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello
+                cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
             }
         }
         stage('Build') {
