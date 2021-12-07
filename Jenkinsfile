@@ -9,7 +9,7 @@ pipeline {
                     rm -rf *'''
             }
         }
-        stage('copy fromgit') {
+        stage('copy from-git') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
