@@ -7,9 +7,9 @@ pipeline {
     {
         stage('removing previous build') {
             steps {
-                sh rm -rf *
-            }
-        }
+                sh 'rm -rf *'
+                }
+             }
         stage('copy from-git') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
