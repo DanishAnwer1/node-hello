@@ -4,12 +4,12 @@ pipeline {
         JOB_NAME = "github_nodejs_app"
          PATH = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello/" 
      }
-    //stages{
-      //  stage('removing previous build') {
-        //    steps {
-          //      sh '''rm -rf *'''
-            //    }
-             //}
+    stages{
+        stage('removing previous build') {
+            steps {
+             sh 'rm -rf *'
+                }
+             }
         stage('copy from-git') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
