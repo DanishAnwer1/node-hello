@@ -7,8 +7,7 @@ pipeline {
     {
         stage('removing previous build') {
             steps {
-                sh 
-                'rm -rf *'
+                sh rm -rf *
             }
         }
         stage('copy from-git') {
