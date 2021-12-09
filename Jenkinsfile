@@ -1,9 +1,9 @@
 pipeline {
     agent any ; 
-    // environment {
+     environment {
       //  JOB_NAME = "github_nodejs_app"
-        // PATH = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello/" 
-  //   }
+         PATH = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello/" 
+     }
     stages{
         stage('removing previous build') {
             steps {
