@@ -17,12 +17,12 @@ pipeline {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
-        stage('a'){
-            steps {
+        //stage('a'){
+          //  steps {
                // sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello
                  //cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
-            }
-        }
+       //     }
+        //}
         stage('Build') {
             steps {
                 sh '''cd $PATH
