@@ -20,7 +20,7 @@ pipeline {
         stage('a'){
             steps {
                 sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello'''
-               // cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
+                 cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
             }
         }
         stage('Build') {
