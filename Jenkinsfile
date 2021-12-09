@@ -1,9 +1,9 @@
 pipeline {
     agent any
-    //environment {
-      //  JOB_NAME = "github_nodejs_app"
-        //PATH = "var/lib/jenkins/workspace/github_nodejs_app/node-hello/"
-    //}
+     environment {
+        JOB_NAME = "github_nodejs_app"
+        PATH = "var/lib/jenkins/workspace/github_nodejs_app/node-hello/"
+    }
     stages 
     {
         stage('removing previous build') {
@@ -19,13 +19,14 @@ pipeline {
         }
         stage('a'){
             steps {
-                sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello
-                 cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
+               // sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello
+                 //cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
             }
         }
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh '''cd $PATH
+                npm install'''
             }
         }
         stage('Run') {
