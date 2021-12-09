@@ -24,8 +24,7 @@ pipeline {
         //}
         stage('Build') {
             steps {
-                "${path}"
-                //sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello/
+                sh '''cd "${path}"
                 npm install'''
             }
         }
