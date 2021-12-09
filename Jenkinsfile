@@ -8,8 +8,7 @@ pipeline {
     {
         stage('removing previous build') {
             steps {
-                sh //'''cd /var/lib/jenkins/workspace/github_nodejs_app/ 
-                    'rm -rf *'
+                sh 'rm -rf *' //'''cd /var/lib/jenkins/workspace/github_nodejs_app/ 
             }
         }
         stage('copy from-git') {
