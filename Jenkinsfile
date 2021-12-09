@@ -1,6 +1,6 @@
 pipeline {
-    agent any ; 
-     environment {
+    agent any; 
+     environment{
         job_name = "github_nodejs_app"
          path = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello/" 
      }
