@@ -3,12 +3,12 @@ pipeline {
      environment {
         JOB_NAME = "github_nodejs_app"
          PATH = "var/lib/jenkins/workspace/github_nodejs_app/node-hello/" }
-}
     stages 
     {
         stage('removing previous build') {
             steps {
-                sh 'rm -rf *'
+                sh 
+                'rm -rf *'
             }
         }
         stage('copy from-git') {
