@@ -1,11 +1,11 @@
 pipeline {
     agent any; 
 environment {
- imageName = "hrmsfe"
- registryCredentials = "Nexus-Credentials"
-  registry = "10.254.0.7:8085/"
- dockerImage = ''
- containerName="frontend"
+ imageName = "nodehello"
+// registryCredentials = "Nexus-Credentials"
+ // registry = "10.254.0.7:8085/"
+// dockerImage = ''
+// containerName="frontend"
  }    
   stages{
         stage('removing previous build') {
