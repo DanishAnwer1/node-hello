@@ -18,8 +18,8 @@ environment {
         }
         stage('Build') {
             steps {
-                sh '''cd "${loc}"
-                npm install'''
+           //     sh '''cd "${loc}"
+         //       npm install'''
             }
         }
 //        stage('Run') {
