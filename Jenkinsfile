@@ -1,9 +1,10 @@
 pipeline {
     agent any; 
-//environment {
- //imageName = "nodehello"
- //path = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
- //}
+    
+    environment {
+        imageName = "nodehello"
+        path = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
+ }
     stages{
       stage('removing previous build') {
          steps {
