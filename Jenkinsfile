@@ -1,13 +1,15 @@
 pipeline {
     agent any; 
-    
-//     environment {
-//         imageName = "nodehello"
-//         path = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
- //}
-    stages{
-      stage('removing previous build') {
-         steps {
+environment {
+ imageName = "hrmsfe"
+ registryCredentials = "Nexus-Credentials"
+  registry = "10.254.0.7:8085/"
+ dockerImage = ''
+ containerName="frontend"
+ }    
+  stages{
+        stage('removing previous build') {
+            steps {
              sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/
                 rm -rf node-hello'''
                }
