@@ -19,7 +19,7 @@ environment {
         stage('Build') {
             steps {
                 sh '''cd "${loc}"
-                npm install'''
+                cd "${loc}" npm install'''
             }
         }
         stage('Run as a service') {
