@@ -3,9 +3,6 @@ pipeline {
 environment {
  imageName = "nodehello"
  loc = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
- // registry = "10.254.0.7:8085/"
-// dockerImage = ''
-// containerName="frontend"
  }    
   stages{
         stage('removing previous build') {
@@ -19,21 +16,15 @@ environment {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
-        //stage('a'){
-          //  steps {
-               // sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/node-hello
-                 //cp *.* /var/lib/jenkins/workspace/github_nodejs_app'''
-       //     }
-        //}
         stage('Build') {
             steps {
                 sh '''cd "${loc}"
                 npm install'''
             }
         }
-        stage('Run') {
-            steps {
-                sh 'npm start'
+//        stage('Run') {
+  //          steps {
+    //            sh 'npm start'
             }
         }
     }
