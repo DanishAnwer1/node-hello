@@ -7,7 +7,7 @@ environment {
     stages{
       stage('removing previous build') {
          steps {
-          sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/
+             sh '''cd /var/lib/jenkins/workspace/github_nodejs_app/
                 rm -rf node-hello'''
                }
             }
