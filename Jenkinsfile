@@ -16,12 +16,12 @@ environment {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
-        stage('Build') {
-            steps {
-           //     sh '''cd "${loc}"
+       // stage('Build') {
+           // steps {
+             //   sh '''cd "${loc}"
          //       npm install'''
-            }
-        }
+            //}
+       // }
 //        stage('Run') {
   //          steps {
     //            sh 'npm start'
