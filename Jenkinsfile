@@ -11,6 +11,10 @@ environment {
                 rm -rf node-hello'''
                }
             }
+      stage ('echo imagetag'){
+          steps {
+              echo "$imagetag"}
+      }
         stage('copy from-git') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
