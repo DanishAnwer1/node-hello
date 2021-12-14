@@ -16,16 +16,20 @@ environment {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
             }
         }
-       // stage('Build') {
-           // steps {
-             //   sh '''cd "${loc}"
-         //       npm install'''
-            //}
-       // }
-//        stage('Run') {
-  //          steps {
-    //            sh 'npm start'
-       //     }
-       // }
+        stage('Build') {
+            steps {
+                sh '''cd "${loc}"
+                npm install'''
+            }
+        }
+        stage('Run as a service') {
+           steps {
+               sh '''echo "[Service]                                       
+                        ExecStart=/usr/bin/node /var/lib/jenkins/workspace/github_nodejs_app/node-hello/index.js
+                        [Install]
+                        WantedBy=default.target" > /etc/systemd/system/nodejsapp.service
+                        systemctl start nodejsapp.service'''
+           }
+       }
     }
 }
