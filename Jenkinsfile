@@ -28,7 +28,7 @@ environment {
 ExecStart=/usr/bin/node /var/lib/jenkins/workspace/github_nodejs_app/node-hello/index.js
 [Install]
 WantedBy=default.target" > /etc/systemd/system/nodejsapp.service
-                        sudo systemctl start nodejsapp.service'''
+                   systemctl start nodejsapp.service'''
            }
        }
     }
