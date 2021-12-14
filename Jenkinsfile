@@ -2,7 +2,7 @@ pipeline {
     agent any; 
 environment {
  imageName = "nodehello"
- path = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
+ PATH = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
  // registry = "10.254.0.7:8085/"
 // dockerImage = ''
 // containerName="frontend"
