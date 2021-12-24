@@ -4,7 +4,7 @@ environment {
  imageName = "nodehello"
  loc = "/var/lib/jenkins/workspace/github_nodejs_app/node-hello"
  locc = "/var/lib/jenkins/workspace/github_nodejs_app/"
- }    
+    }    
   stages{
         stage('removing previous build') {
             steps {
@@ -42,5 +42,3 @@ environment {
             }
         }
     }
-  }
-}
