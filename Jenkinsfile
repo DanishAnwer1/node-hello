@@ -22,21 +22,18 @@ environment {
             steps {
                 sh '''cd "${loc}"
                 cp *.* "${cloc}"'''
-            //    cd "${loc}" npm install'''
             }
         }
         stage('Build') {
            steps {
                sh '''cd "${cloc}" 
                npm install'''
-                // 'pm2 start index.js'
            }
        }
       stage('Deployment') {
           steps { 
               sh '''cd "${cloc}" 
               pm2 start index.js'''
-         //     'pm2 start index.js'''
           }
       }
 //     stage('Check error code') {
