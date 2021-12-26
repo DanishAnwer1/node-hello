@@ -20,6 +20,7 @@ environment {
           } catch (err) {
               echo "app is not running"
           }
+      }
         stage('Code check out') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
