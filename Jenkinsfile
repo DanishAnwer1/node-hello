@@ -10,8 +10,8 @@ environment {
         stage('removing previous build') {
             steps {
               sh '''cd "${locc}"
-                rm -rf node-hello'''
-                // pm2 delete default'''
+                rm -rf node-hello
+                pm2 delete default'''
                }
             }
         stage('Code check out') {
