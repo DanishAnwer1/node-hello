@@ -11,7 +11,7 @@ environment {
             steps {
               sh '''cd "${locc}"
                 rm -rf node-hello
-                pm2 delete index.js'''
+                pm2 delete default'''
                }
             }
         stage('Code check out') {
