@@ -27,13 +27,15 @@ environment {
         }
         stage('Build') {
            steps {
-               sh '''cd "${cloc}" npm install'''
+               sh '''cd "${cloc}" 
+               npm install'''
                 // 'pm2 start index.js'
            }
        }
       stage('Deployment') {
           steps { 
-              sh '"${cloc} pm2 start index.js"'
+              sh '''"cd${cloc}" 
+              pm2 start index.js'''
          //     'pm2 start index.js'''
           }
       }
