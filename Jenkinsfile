@@ -18,6 +18,7 @@ environment {
           try {
               sh 'pm2 delete default'
           } catch (err) {
+              echo err.getMessage() 
               echo "app is not running"
           }
       }
