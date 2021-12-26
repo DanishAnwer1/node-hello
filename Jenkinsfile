@@ -10,10 +10,16 @@ environment {
         stage('removing previous build') {
             steps {
               sh '''cd "${locc}"
-                rm -rf node-hello
-                pm2 delete default'''
+                rm -rf node-hello'''
+                // pm2 delete default'''
                }
             }
+      stage('Stop running appp') {
+          try {
+              sh 'pm2 delete default'
+          } catch (err) {
+              echo "app is not running"
+          }
         stage('Code check out') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
