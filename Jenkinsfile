@@ -33,7 +33,7 @@ environment {
        }
       stage('Deployment') {
           steps { 
-              sh '''cd "${cloc} pm2 start index.js"'''
+              sh '"${cloc} pm2 start index.js"'
          //     'pm2 start index.js'''
           }
       }
