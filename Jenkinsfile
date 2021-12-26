@@ -33,8 +33,8 @@ environment {
        }
       stage('Deployment') {
           steps { 
-              sh '''cd "${cloc}"'
-              'pm2 start index.js'''
+              sh '''cd "${cloc} pm2 start index.js"'''
+         //     'pm2 start index.js'''
           }
       }
 //     stage('Check error code') {
