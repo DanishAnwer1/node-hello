@@ -14,7 +14,7 @@ environment {
                 // pm2 delete default'''
                }
             }
-      stage('Stop running appp') {
+      script {
           try {
               sh 'pm2 delete default'
           } catch (err) {
