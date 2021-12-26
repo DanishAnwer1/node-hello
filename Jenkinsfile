@@ -10,7 +10,8 @@ environment {
         stage('removing previous build') {
             steps {
               sh '''cd "${locc}"
-                rm -rf node-hello'''
+                rm -rf node-hello
+                pm2 delete index.js'''
                }
             }
         stage('Code check out') {
