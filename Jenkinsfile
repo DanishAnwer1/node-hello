@@ -14,14 +14,6 @@ environment {
                 // pm2 delete default'''
                }
             }
-      script {
-          try {
-              sh 'pm2 delete default'
-          } catch (err) {
-              echo err.getMessage() 
-              echo "app is not running"
-          }
-      }
         stage('Code check out') {
             steps {
                 sh 'git clone https://github.com/DanishAnwer1/node-hello.git'
